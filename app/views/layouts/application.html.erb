@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title><%= @page_title || default_page_title %></title>
+<%  @stylesheets << "admin/gorilla"
+	@stylesheets.uniq.each do |stylesheet| -%>
+    <%= stylesheet_link_tag stylesheet %>
+<% end -%>
+<% @javascripts.uniq.each do |script| -%>
+    <%= javascript_include_tag script %>
+<% end -%>
+    <!--[if lt IE 7]>
+    <script defer type="text/javascript" src="/javascripts/pngfix.js"></script>
+    <![endif]-->
+<% if @content_for_page_scripts -%>
+    <script type="text/javascript">
+    // <![CDATA[
+<%= @content_for_page_scripts %>
+    // ]]>
+    </script>
+<% end -%>
+<% if @content_for_page_css -%>
+    <style type="text/css" media="screen">
+<%= @content_for_page_css -%>
+    </style>
+<% end -%>
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <div id="site-title"><%= link_to_unless_current title, admin_url %></div>
+        <div id="site-subtitle"><%= subtitle %></div>
+<% if logged_in? -%>
+        <div id="navigation">
+          <%= links_for_navigation %>
+        </div>
+<% end -%>
+      </div>
+      <hr class="hidden" />
+      <div id="main">
+<% if flash[:notice] -%>
+        <div id="notice">
+          <p><%= flash[:notice] %></p>
+        </div>
+<% end -%>
+<% if flash[:error] -%>
+        <div id="error">
+          <p><%= flash[:error] %></p>
+        </div>
+<% end -%>
+        <div id="content">
+<%= yield %>
+        </div>
+      </div>
+      <hr class="hidden" />
+      <div id="footer">
+        <p>This site was made with Ruby and is powered by <a href="http://radiantcms.org">Radiant CMS</a>
+          version <%= Radiant::Version %><% if Radiant.loaded_via_gem? %> (gem)<% end %>.</p>
+        <p id="site-links">
+<% if logged_in? -%>
+  <% if admin? -%>
+          <%= nav_link_to 'Users', user_index_url %>
+          <span class="separator"> | </span>
+          <%= nav_link_to 'Extensions', extension_index_url %>
+  <% else -%>
+          <%= nav_link_to 'Preferences', user_preferences_url %>
+  <% end -%>
+          <span class="separator"> | </span>
+          <%= nav_link_to 'Log Out', logout_url %>
+          <span class="separator"> | </span>
+<% end -%>
+          <%= link_to image('view-site.gif', :alt => 'View Site', :title => ''), homepage_url %>
+        </p>
+      </div>
+    </div>
+<% if @content_for_popups -%>
+    <div id="popups">
+<%= yield :popups %>
+    </div>
+<% end -%>
+  </body>
+</html>

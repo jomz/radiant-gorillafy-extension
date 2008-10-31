@@ -1,6 +1,8 @@
 # Uncomment this if you reference any of your controllers in activate
 require_dependency 'application'
 
+class GorillafyExtensionError < StandardError; end
+
 class GorillafyExtension < Radiant::Extension
   version "1.1"
   description "Describe your extension here"

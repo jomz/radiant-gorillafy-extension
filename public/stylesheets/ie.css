@@ -1,0 +1,34 @@
+/************************************************	
+Description: IE fixes
+************************************************/
+/* serve transparent gif to IE6 because IE6 doesn't support alpha transparency on PNG */
+.validation-advice{
+background-image:url(/images/bullet-error.gif);
+}
+/* add hasLayout, fix stuff */
+.hyphen{
+  zoom:1;
+  display:inline;
+}
+/* prevent double spacing on nav_sec li's */
+#nav_sec li{
+  display:inline;
+}
+
+/* Lightbox fix */
+#prevLink {background: url(/stylesheets/lightbox/images/prevlabel.gif) left top no-repeat; /* Hover doesn't work in IE, make gif visible always */}
+#nextLink {background: url(/stylesheets/lightbox/images/nextlabel.gif) right top no-repeat; /* Hover doesn't work in IE, make gif visible always */}
+
+/* prevent guillotine bug in IE
+#content:after{
+content: "<div style='clear:left; height:0;font-size:1px; line-height:0'>&nbsp;</div>";
+}
+*/
+
+/* extra clearfix rules */
+.clearfix {
+  display: inline-block;}
+  /* Hides from IE-mac \\*/
+  * html .clearfix {height: 1%;}
+  .clearfix {display: block;}
+  /* End hide from IE-mac */

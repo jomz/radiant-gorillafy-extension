@@ -1,0 +1,31 @@
+#attachments {
+  clear: both;
+  border: 1px solid #d4cba4;
+  background: white;
+  margin: 10px 0;
+}
+#attachments-toolbar { 
+  float: right;
+  padding: 10px;
+}
+#attachments h3 {
+  background: #eae3c5;
+  margin: 0;
+  padding: 0.5em;
+}
+p.attachment {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.attachment div img{
+  max-height:50px;
+  max-width:50px;
+  float:left;
+}
+table.attachment {
+  margin: 0.5em;
+  display: inline;
+}
+.attachment img.thumbnail {
+ border: 2px solid #d4cba4;
+}

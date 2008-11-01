@@ -2,3 +2,4 @@ admin.title: "Gorilla CMS"
 defaults.page.parts: 'body'
 defaults.page.status: 'draft'
 defaults.page.filter: 'WymEditor'
+page.edit.published_date?: 'true'

@@ -13,7 +13,7 @@ namespace :radiant do
       end
       
       desc "Copies public assets of the Gorillafy extension to the instance public/ directory."
-      task :install => :environment do
+      task :update => :environment do
         is_svn_or_dir = proc {|path| path =~ /\.svn/ || File.directory?(path) }
         Dir[GorillafyExtension.root + "/public/**/*"].reject(&is_svn_or_dir).each do |file|
           path = file.sub(GorillafyExtension.root, '')

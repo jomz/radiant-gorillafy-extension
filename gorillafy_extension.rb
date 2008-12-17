@@ -15,7 +15,7 @@ class GorillafyExtension < Radiant::Extension
   def activate
     # admin.tabs.add "Gorillafy", "/admin/gorillafy", :after => "Layouts", :visibility => [:all]
     ApplicationController.class_eval do
-      prepend_before_filter :customize_admin_css
+      append_before_filter :customize_admin_css
       def customize_admin_css
         @stylesheets ||=[]
         include_stylesheet ('admin/gorilla')

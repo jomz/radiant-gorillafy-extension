@@ -364,7 +364,8 @@ function unboot_all_wym() {
 	{
 		var parts = $$('.part');
     for(var i=0;i< parts.length;i++) {
-			var part_name = RegExp.$1;
+			if (/part-([\w\d-]+)/i.test(parts[i].id))
+	      var part_name = RegExp.$1;
      	// Find all parts that have WYM set as filter
 			if ($F('part_' + part_name + '_filter_id') == 'WymEditor')
 				unboot_wym($('part_'+ part_name +'_content'));

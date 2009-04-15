@@ -16,7 +16,6 @@
 
 /* A container should group all your columns. */
 .wrap {
-  /*background: url(/images/grid.png);*/
   width: 950px;
   margin: 0 auto;
   text-align:left;
@@ -161,7 +160,6 @@ div.colborder {
 	position:relative;
 }
 
-
 /* Misc classes and elements
 -------------------------------------------------------------- */
 
@@ -188,12 +186,11 @@ hr.space {
   color: #fff;
 }
 
-
 /* Clearing floats without extra markup
    Based on How To Clear Floats Without Structural Markup by PiE
    [http://www.positioniseverything.net/easyclearing.html] */
 
-.clearfix:after, .container:after {
+.clearfix:after, .wrap:after {
     content: "."; 
     display: block; 
     height: 0; 

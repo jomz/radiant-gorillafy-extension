@@ -15,7 +15,7 @@
 -------------------------------------------------------------- */
 
 /* A container should group all your columns. */
-.wrap {
+.container{
   width: 950px;
   margin: 0 auto;
   text-align:left;

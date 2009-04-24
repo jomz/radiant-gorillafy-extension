@@ -25,7 +25,7 @@ table{border-collapse:collapse; border-spacing:0;}
 fieldset, img{border:0;}
 
 /* Hides hr */
-hr{display:none;}
+/*hr{display:none;}*/
 
 /* Hides skip link */
 #skip-to-content{display:none;}

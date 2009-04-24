@@ -125,6 +125,7 @@ a:hover, a:focus, a:active{
 #nav_main{
   float:left;
   margin:54px 0 0 20px;
+  list-style-type:none;
 }
 #nav_main li{
   float:left;
@@ -158,6 +159,9 @@ a:hover, a:focus, a:active{
 }
 
 /* nav-sec */
+#nav_sec{
+  list-style-type:none;
+}
 #nav_sec a{
   border-top:1px solid #000;
   display:block;
@@ -186,17 +190,6 @@ a:hover, a:focus, a:active{
 
 /* Content_main
 ------------------------------------------------------------------*/
-#content_main li{
-  background:url(/images/bullet.gif) no-repeat 0 center;
-  display:block;
-  line-height:18px;
-  padding:4px 0 4px 14px;
-}
-#content_main ul li:first-child{
-  border-top:0;
-  padding-top:0;
-}
-
 /* gmap */
 #map{
   height:300px;

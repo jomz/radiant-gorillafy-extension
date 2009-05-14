@@ -6,7 +6,7 @@ body{
   font: 12px/1.5 "Helvetica", "Helvetica Nueu", Arial, verdana;
 }
 h1, h2, h3, h4, p, ul, blockquote{
-	margin:0 10px 18px 10px;
+	margin:0 10px 18px 0;
 }
 h1{
   font-size:24px;

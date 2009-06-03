@@ -63,13 +63,8 @@ input:focus,
 textarea:focus{
   background:#f6feff;
 }
-button{
-  background:#386b7c;
-  border:double #FFF;
-  color:#FFF;
+input[type="submit"]{
   margin-left:130px;
-  cursor:pointer;
-  text-transform:uppercase;
 }
 abbr { 
   cursor:help; 

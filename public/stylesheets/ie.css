@@ -1,34 +1,54 @@
-/************************************************	
-Description: IE fixes
-************************************************/
 /* serve transparent gif to IE6 because IE6 doesn't support alpha transparency on PNG */
 .validation-advice{
 background-image:url(/images/bullet-error.gif);
 }
+
 /* add hasLayout, fix stuff */
-.hyphen{
+.element{
   zoom:1;
-  display:inline;
 }
+
 /* prevent double spacing on nav_sec li's */
 #nav_sec li{
   display:inline;
 }
 
-/* Lightbox fix */
-#prevLink {background: url(/stylesheets/lightbox/images/prevlabel.gif) left top no-repeat; /* Hover doesn't work in IE, make gif visible always */}
-#nextLink {background: url(/stylesheets/lightbox/images/nextlabel.gif) right top no-repeat; /* Hover doesn't work in IE, make gif visible always */}
+/* Lightbox fix (Hover doesn't work in IE, make gif visible always) */
+#prevLink {background: url(/stylesheets/lightbox/images/prevlabel.gif) left top no-repeat;}
+#nextLink {background: url(/stylesheets/lightbox/images/nextlabel.gif) right top no-repeat;}
 
-/* prevent guillotine bug in IE
-#content:after{
-content: "<div style='clear:left; height:0;font-size:1px; line-height:0'>&nbsp;</div>";
+/* Center content */
+body{
+  text-align:center;
 }
-*/
 
-/* extra clearfix rules */
-.clearfix {
-  display: inline-block;}
-  /* Hides from IE-mac \\*/
-  * html .clearfix {height: 1%;}
-  .clearfix {display: block;}
-  /* End hide from IE-mac */
+/* Fixes IE margin bugs */
+* html .column, * html div.span-1, * html div.span-2, 
+* html div.span-3, * html div.span-4, * html div.span-5, 
+* html div.span-6, * html div.span-7, * html div.span-8, 
+* html div.span-9, * html div.span-10, * html div.span-11, 
+* html div.span-12, * html div.span-13, * html div.span-14, 
+* html div.span-15, * html div.span-16, * html div.span-17, 
+* html div.span-18, * html div.span-19, * html div.span-20, 
+* html div.span-21, * html div.span-22, * html div.span-23, 
+* html div.span-24 { overflow-x: hidden;}
+
+/* Fixes incorrect placement of ol numbers in IE6/7. */
+ol { margin-left:2em; }
+
+/* Fixes wrong line-height on sup/sub in IE. */
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+
+/* Fixes IE7 missing wrapping of code elements. */
+html>body p code { *white-space: normal; } 
+
+/* IE 6&7 has problems with setting proper <hr> margins. */
+hr  { margin: -8px auto 11px; }
+
+/* Clearing 
+-------------------------------------------------------------- */
+/* Makes clearfix actually work in IE */ 
+.clearfix, .wrap {display: inline-block;}
+* html .clearfix,
+* html .container {height: 1%;}

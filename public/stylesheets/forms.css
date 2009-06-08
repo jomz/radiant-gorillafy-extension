@@ -55,21 +55,12 @@ label:after,
   content:':'; 
 } 
 input, textarea { 
-  background: #FFF;
   padding:3px 3px; 
   width:250px; 
 }
-input:focus,
-textarea:focus{
-  background:#f6feff;
-}
-button{
-  background:#386b7c;
-  border:double #FFF;
-  color:#FFF;
+input[type="submit"]{
   margin-left:130px;
-  cursor:pointer;
-  text-transform:uppercase;
+  width:auto;
 }
 abbr { 
   cursor:help; 

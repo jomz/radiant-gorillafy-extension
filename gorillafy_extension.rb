@@ -22,6 +22,8 @@ class GorillafyExtension < Radiant::Extension
       end
     end
     
+    admin.page.edit.add :main, 'string_js_include', :before => 'edit_header'
+    
     filename = File.join(GorillafyExtension.root, 'config', 'gorillafy.yml')
     raise GorillafyExtensionError.new("Gorilla'ize error: configuration file does not exist, see the README") unless File.exists?(filename)
     configurations = YAML::load_file(filename)

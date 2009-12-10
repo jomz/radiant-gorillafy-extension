@@ -35,19 +35,3 @@ namespace 'views' do
     end
   end
 end
-
-# so not working yet
-namespace :gorilla do
-  namespace :setup do
-    desc "loads Gorilla db template"
-    task :db => :environment do
-      # load_database_template()
-      puts "Loading Gorilla db template ..."
-      YAML.load_file("#{GorillafyExtension.root}/db/templates/gorilla.yml")
-    end
-    desc "loads Gorilla multilang db template"
-    task :ml_db => :environment do
-      #...
-    end
-  end
-end

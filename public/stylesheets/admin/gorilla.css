@@ -626,3 +626,6 @@ table#filter-reference-table blockquote {
   right:0;
   top:0;
 }
+#tabs .disabled{
+  display:none!important;
+}

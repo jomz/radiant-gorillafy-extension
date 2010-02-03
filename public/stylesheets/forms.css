@@ -94,27 +94,19 @@ label input{
 }
 
 /* notes & error handling */
-.validation-advice{
+label.error{
   font-family:arial;
   background:url(/images/bullet-error.png) no-repeat 0 0;
-  color:#CC0000;
+  color:#666;
   font-size:11px;
   font-style:italic;
+  float:none;
   font-weight:normal;
   margin:6px 0 0 130px;
   padding:0 3px 0 16px;
+  width:auto;
 }
 .note{
   font-size:0.8333em;
   font-weight:normal;
-}
-.contact_form_notice{
-  clear:left;
-  font-size:11px;
-}
-.mailer-error{/* when somebody enters a non-existent e-mail adress */
-  background:#f7f7b5;
-  border:1px solid red;
-  padding:9px;
-  margin-bottom:18px
 }

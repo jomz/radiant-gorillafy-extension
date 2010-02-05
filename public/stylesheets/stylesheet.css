@@ -58,19 +58,17 @@ del{
 pre 				{ margin: 1.5em 0; white-space: pre; }
 pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
 
-/* Lists
+
+/* Lists (Not ideal, would prefer http://konstruktors.com/blog/design-suggetions/125-how-to-create-beautiful-and-elegant-html-lists-using-css/)
 -------------------------------------------------------------- */
-li ul, li ol{
-  margin:0 1.5em;
-}
 ul, ol{
-  margin-left:10px;
+	padding: 0 0 0 24px;
 }
 ul{
-  list-style-type: disc;
+	list-style:url(/images/bullet.gif);
 }
 ol{
-  list-style-type: decimal;
+	list-style-type: decimal;
 }
 
 /* Links

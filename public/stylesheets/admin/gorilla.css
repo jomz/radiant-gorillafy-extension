@@ -616,77 +616,16 @@ table#filter-reference-table blockquote {
   margin-bottom: 1em;
 }
 
-/* Page attachments */
-#attachments{
- float:left;
- position:relative;
- width:100%;
-}
-#attachments-toolbar { 
-  position:absolute;
-  right:5px;
-  top:5px;
-}
-#attachments table{
-  display:block;
-  float:left;
-  width:232px;
-}
-.attachment td>div{
-  background:#FFF no-repeat;
-  background-position:5px 5px;
-  height:25px;
-  padding:5px;
-  position:relative;
-  text-align:center;
-  width:25px;
-}
-.attachment td>div a.link-to-file{/* align file icon vertically with text*/
-  display:block;
-  padding-top:2px;
-}
+/* "Locked" page-parts */
 
-/* dropdown boxes for images */
-.attachment td h4{
-  background:#eae4c4 url(/images/admin/attachment-popup-arrow.gif) no-repeat center center;
-  border:1px solid #9e9a85;
-  font-size:90%;
-  font-weight:normal;
-  float:left;
-  height:30px;
-  margin:0;
-  padding:0;
-  text-indent:-3000px;
-  width:30px;
+.part{
+  position:relative;
 }
-.attachment td div.attachment-popup{
-  display:none;
-  left:0;
+.part .lock_page_part{
   position:absolute;
+  right:0;
   top:0;
-  z-index:100;
 }
-.attachment td div.attachment-formats{
-  background:#eae4c4 url(/images/admin/attachment-popup-bg.gif) no-repeat 0 0;
-  border:1px solid #9e9a85;
-  border-width:0 1px 1px 1px;
-  float:left;
-  height:auto;
-  margin-top:-1px;
-  padding:10px;
-  width:223px;
-}
-.attachment td:hover>div{/* Fix IE's bad z-index implementation (http://www.aplus.co.yu/lab/z-pos/) */
-  z-index:1;
-}
-.attachment td:hover div.attachment-popup{
-  display:block;
-}
-.attachment td div.attachment-formats img{
-  border:1px solid #9e9a85;
-  float:left;
-  margin:0 0 0px 10px;
-}
-.attachment td div.attachment-formats img:first-child{
-  margin:0;
+#tabs .disabled{
+  display:none!important;
 }

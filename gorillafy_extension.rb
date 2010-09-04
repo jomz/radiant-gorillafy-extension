@@ -13,24 +13,7 @@ class GorillafyExtension < Radiant::Extension
   # end
   
   def activate
-    # admin.tabs.add "Gorillafy", "/admin/gorillafy", :after => "Layouts", :visibility => [:all]
-    ApplicationController.class_eval do
-      append_before_filter :customize_admin_css
-      def customize_admin_css
-        @stylesheets ||=[]
-        include_stylesheet ('admin/gorilla')
-      end
-    end
-    
     admin.page.edit.add :main, 'string_js_include', :before => 'edit_header'
-    
-    filename = File.join(GorillafyExtension.root, 'config', 'gorillafy.yml')
-    raise GorillafyExtensionError.new("Gorilla'ize error: configuration file does not exist, see the README") unless File.exists?(filename)
-    configurations = YAML::load_file(filename)
-    configurations.each do |key, value|
-      Radiant::Config["#{key}"] = value
-    end
-    
   end
   
   def deactivate

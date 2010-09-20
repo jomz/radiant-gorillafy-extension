@@ -1,4 +1,19 @@
 namespace :radiant do
+  namespace :assets do
+    desc "Groups all javascript and css files into 1 'main'"
+    task :group do
+      Javascripts = %w(jquery application).map { |js| File.join(RAILS_ROOT, 'public/javascripts', "#{js}.js") }
+
+      cache_file = File.open(File.join(RAILS_ROOT, 'public', 'javascripts', 'all.js'), 'w')
+      Javascripts.each do |js|
+        cache_file << File.read(js)
+        cache_file << "\n\n"
+      end
+      cache_file.close
+    end
+  end
+  
+  
   namespace :extensions do
     namespace :gorillafy do
       
@@ -23,15 +38,6 @@ namespace :radiant do
           cp file, RAILS_ROOT + path
         end
       end  
-    end
-  end
-end
-
-namespace 'views' do
-  desc 'Renames all your rhtml views to erb'
-  task 'rename' do
-    Dir.glob('**/views/**/*.rhtml').each do |file|
-      puts `git mv #{file} #{file.gsub(/\.rhtml$/, '.html.erb')}`
     end
   end
 end

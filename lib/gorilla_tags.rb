@@ -1,4 +1,4 @@
-module BlogTags
+module GorillaTags
   include Radiant::Taggable
   include ActionView::Helpers::TagHelper # to pass html attributes through tags
   require "digest" # for r:gravatar

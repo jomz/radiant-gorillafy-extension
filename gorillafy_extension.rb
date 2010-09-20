@@ -14,6 +14,9 @@ class GorillafyExtension < Radiant::Extension
   
   def activate
     admin.page.edit.add :main, 'string_js_include', :before => 'edit_header'
+    Page.module_eval do
+      GorillaTags
+    end
   end
   
   def deactivate

@@ -1,48 +1,0 @@
-8
-
-dir
-46
-svn://zuurstof.openminds.be/home/kaizer/svn/cjean/trunk/public/sifr
-svn://zuurstof.openminds.be/home/kaizer/svn/cjean
-
-
-
-2008-11-10T11:35:25.243605Z
-46
-jelle
-
-
-svn:special svn:externals svn:needs-lock
-
-GillSansStd.swf
-file
-61
-
-
-
-2008-11-27T14:21:53.000000Z
-0f6cd61dcb7c284d5645fcbee67add1e
-2008-11-28T10:48:52.027846Z
-61
-jelle
-has-props
-
-GillSansBoldStd.swf
-file
-61
-
-
-
-2008-11-27T14:23:23.000000Z
-c24f1071346f3e3ed909bbececc3c793
-2008-11-28T10:48:52.027846Z
-61
-jelle
-has-props
-
-css
-dir
-
-js
-dir
-

@@ -17,6 +17,9 @@ class GorillafyExtension < Radiant::Extension
     Page.module_eval do
       GorillaTags
     end
+    Admin::PagesController.class_eval do
+      helper Admin::GorillaHelper
+    end
   end
   
   def deactivate

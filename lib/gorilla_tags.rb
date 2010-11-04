@@ -5,6 +5,16 @@ module GorillaTags
 
   class TagError < StandardError; end
   
+  desc %{
+    Gets the first paragraph of the given part, without the surrounding <p>'s.
+    tag.attr['part'] defaults to "body"
+  }
+  tag "first_p" do |tag|
+    part = tag.attr['part'] || 'body'
+    page = tag.locals.page
+    return page.part(part).content[/<p(.*?)?>(.+?)<\/p>/,2] unless page.part(part).nil?
+  end
+  
   tag "time_ago_in_words" do |tag|
     ActionView::Base.new.time_ago_in_words(tag.locals.page.published_at || tag.locals.page.created_at)
   end

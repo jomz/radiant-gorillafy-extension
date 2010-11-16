@@ -28,6 +28,11 @@ module GorillaTags
     }
   end
   
+  tag "fix_external_link" do |tag|
+    link = tag.expand.strip
+    link["http://"] ? link : "http://#{link}"
+  end
+  
   tag "time_ago_in_words" do |tag|
     ActionView::Base.new.time_ago_in_words(tag.locals.page.published_at || tag.locals.page.created_at)
   end

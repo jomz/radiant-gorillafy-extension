@@ -28,6 +28,9 @@ module GorillaTags
     }
   end
   
+  desc %{
+    Prepends the given link with http:// if needed.
+  }
   tag "fix_external_link" do |tag|
     link = tag.expand.strip
     link["http://"] ? link : "http://#{link}"

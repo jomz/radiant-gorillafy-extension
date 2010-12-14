@@ -22,6 +22,6 @@ Object.extend(String.prototype, {
 	  	s = s.replace(diacritics[i][0], diacritics[i][1]);
 		}
 		return s.oldToSlug();
-	},
+	}
 });
 String.prototype.toSlug = String.prototype.toTransliteratedSlug;
